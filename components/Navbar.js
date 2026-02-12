@@ -57,11 +57,11 @@ export default function Navbar() {
                     <X />
                   </button>
                 </div>
-                <nav className="flex flex-col gap-4">
+                <nav className="flex flex-col gap-4 text-white">
                   <a href="#games" onClick={() => setMenuOpen(false)} className="py-2">Games</a>
                   <a href="#tournaments" onClick={() => setMenuOpen(false)} className="py-2">Tournaments</a>
                   <a href="#community" onClick={() => setMenuOpen(false)} className="py-2">Community</a>
-                  <AuthModal discordAuthUrl="https://discord.com/oauth2/authorize?client_id=1471350778634698823&response_type=code&redirect_uri=https%3A%2F%2Fredesigned-space-spoon-jj7745qpx6jp3p47j-3000.app.github.dev%2Fapi%2Fauth%2Fcallback%2Fdiscord&scope=email+identify" />
+                  <AuthModal discordAuthUrl="https://discord.com/oauth2/authorize?client_id=1471350778634698823&response_type=code&redirect_uri=https%3A%2F%2Fredesigned-space-spoon-jj7745qpx6jp3p47j-3000.app.github.dev%2Fapi%2Fauth%2Fcallback%2Fdiscord&scope=email+identify" discordButtonClass="text-white" triggerClass="px-4 py-2 bg-neonBlue text-white rounded" />
                 </nav>
               </motion.div>
             </motion.div>
