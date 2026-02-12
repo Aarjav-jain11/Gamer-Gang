@@ -30,7 +30,7 @@ export default function Navbar() {
           <nav className="hidden md:flex gap-6 items-center text-sm text-white/80">
             <a href="#games" className="hover:text-white">Games</a>
             <a href="#tournaments" className="hover:text-white">Tournaments</a>
-            <a href="#community" className="hover:text-white">Community</a>
+            <a href="https://discord.gggg/Ur53mT9vxq" target="_blank" rel="noopener noreferrer" className="hover:text-white">Join Community</a>
             <AuthModal discordAuthUrl="https://discord.com/oauth2/authorize?client_id=1471350778634698823&response_type=code&redirect_uri=https%3A%2F%2Fredesigned-space-spoon-jj7745qpx6jp3p47j-3000.app.github.dev%2Fapi%2Fauth%2Fcallback%2Fdiscord&scope=email+identify" />
           </nav>
           <div className="md:hidden">
@@ -64,7 +64,7 @@ export default function Navbar() {
                       right: 0,
                       top: 0,
                       height: '100%',
-                      zIndex: 2000,
+                      zIndex: 2147483647,
                   }}
                 >
                 <div className="flex items-center justify-between mb-6">
@@ -79,7 +79,7 @@ export default function Navbar() {
                 <nav className="flex flex-col gap-4 text-white">
                   <a href="#games" onClick={() => setMenuOpen(false)} className="py-2">Games</a>
                   <a href="#tournaments" onClick={() => setMenuOpen(false)} className="py-2">Tournaments</a>
-                  <a href="#community" onClick={() => setMenuOpen(false)} className="py-2">Community</a>
+                  <button onClick={() => { window.open('https://discord.gggg/Ur53mT9vxq', '_blank'); setMenuOpen(false); }} className="py-2 text-left">Join Community</button>
                   <AuthModal discordAuthUrl="https://discord.com/oauth2/authorize?client_id=1471350778634698823&response_type=code&redirect_uri=https%3A%2F%2Fredesigned-space-spoon-jj7745qpx6jp3p47j-3000.app.github.dev%2Fapi%2Fauth%2Fcallback%2Fdiscord&scope=email+identify" discordButtonClass="text-white" triggerClass="px-4 py-2 bg-neonBlue text-white rounded" />
                 </nav>
               </motion.div>
