@@ -44,22 +44,27 @@ export default function Navbar() {
       {typeof document !== 'undefined' && createPortal(
         <AnimatePresence>
           {menuOpen && (
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0">
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0" style={{zIndex: 900}}>
                 {/* overlay: sits behind the slider - lower z */}
-                <div onClick={() => setMenuOpen(false)} className="absolute inset-0 bg-black/60 z-40" style={{pointerEvents: 'auto'}} />
+                    <div onClick={() => setMenuOpen(false)} style={{position:'fixed', inset:0, background:'rgba(0,0,0,0.6)', zIndex:0, pointerEvents:'auto'}} />
                 <motion.div
                   initial={{ x: '100%' }}
                   animate={{ x: 0 }}
                   exit={{ x: '100%' }}
                   transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                  className="absolute right-0 top-0 h-full w-80 bg-[#07060a] p-6 shadow-2xl z-60"
+                    className="h-full w-80 bg-[#07060a] p-6 shadow-2xl"
                   style={{
                     backdropFilter: 'none',
                     WebkitBackdropFilter: 'none',
                     filter: 'none',
                     transform: 'translateZ(0)',
                     willChange: 'transform',
-                    pointerEvents: 'auto'
+                    pointerEvents: 'auto',
+                      position: 'fixed',
+                      right: 0,
+                      top: 0,
+                      height: '100%',
+                      zIndex: 2000,
                   }}
                 >
                 <div className="flex items-center justify-between mb-6">
