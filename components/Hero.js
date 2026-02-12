@@ -92,7 +92,7 @@ export default function Hero() {
           <p className="mt-6 text-lg text-white/80">Welcome to the arena — <Typing lines={["Pro matches, ladders, and exclusive events.", "Join the community and dominate the battlefield."]} /></p>
           <div className="mt-8 flex gap-4">
             <button className="px-6 py-3 bg-neonBlue text-black rounded-md font-semibold hover:shadow-[0_0_20px_rgba(0,179,255,0.4)] transition-shadow">Play Now</button>
-            <a href="https://discord.gggg/Ur53mT9vxq" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-white/10 rounded-md hover:bg-white/5 inline-flex items-center">Join Community</a>
+            <a href="https://discord.gg/Ur53mT9vxq" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-white/10 rounded-md hover:bg-white/5 inline-flex items-center">Join Community</a>
           </div>
         </motion.div>
       </div>
