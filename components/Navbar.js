@@ -43,7 +43,9 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50">
-            <motion.div initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} transition={{ type: 'spring', stiffness: 300, damping: 30 }} className="absolute right-0 top-0 h-full w-80 bg-[#07060a] p-6 shadow-2xl">
+            {/* overlay (blurred) placed before menu so menu stays clickable */}
+            <div onClick={() => setMenuOpen(false)} className="absolute inset-0 bg-black/40 backdrop-blur-sm z-40" />
+            <motion.div initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} transition={{ type: 'spring', stiffness: 300, damping: 30 }} className="absolute right-0 top-0 h-full w-80 bg-[#07060a] p-6 shadow-2xl z-50">
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
                   <img src="/logo.svg" alt="logo" className="h-8 w-8" />
@@ -60,7 +62,6 @@ export default function Navbar() {
                 <AuthModal discordAuthUrl="https://discord.com/oauth2/authorize?client_id=1471350778634698823&response_type=code&redirect_uri=https%3A%2F%2Fredesigned-space-spoon-jj7745qpx6jp3p47j-3000.app.github.dev%2Fapi%2Fauth%2Fcallback%2Fdiscord&scope=email+identify" />
               </nav>
             </motion.div>
-            <div onClick={() => setMenuOpen(false)} className="absolute inset-0 bg-black/40" />
           </motion.div>
         )}
       </AnimatePresence>
