@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-10 transition-transform duration-300 ${hidden ? '-translate-y-full' : 'translate-y-0'}`}>
-      <div className="backdrop-blur-md bg-black/40 border-b border-white/5">
+      <div className="bg-black/40 border-b border-white/5">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <img src="/logo.svg" alt="Gamer Gang" className="h-8 w-8" />
