@@ -47,7 +47,7 @@ export default function Navbar() {
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50">
               {/* overlay (blurred) - sits behind the slider */}
               <div onClick={() => setMenuOpen(false)} className="absolute inset-0 bg-black/30 backdrop-blur-lg backdrop-brightness-90 z-50" />
-              <motion.div initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} transition={{ type: 'spring', stiffness: 300, damping: 30 }} className="absolute right-0 top-0 h-full w-80 bg-[#07060a] p-6 shadow-2xl z-70">
+              <motion.div initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} transition={{ type: 'spring', stiffness: 300, damping: 30 }} className="absolute right-0 top-0 h-full w-80 bg-[#07060a] p-6 shadow-2xl z-70" style={{backdropFilter: 'none', WebkitBackdropFilter: 'none', filter: 'none'}}>
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-3">
                     <img src="/logo.svg" alt="logo" className="h-8 w-8" />
