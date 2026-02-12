@@ -44,7 +44,7 @@ export default function Navbar() {
         {menuOpen && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50">
             {/* overlay (blurred) placed before menu so menu stays clickable */}
-            <div onClick={() => setMenuOpen(false)} className="absolute inset-0 bg-black/40 backdrop-blur-sm z-40" />
+            <div onClick={() => setMenuOpen(false)} className="absolute inset-0 bg-black/30 backdrop-blur-md backdrop-brightness-90 z-40" />
             <motion.div initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} transition={{ type: 'spring', stiffness: 300, damping: 30 }} className="absolute right-0 top-0 h-full w-80 bg-[#07060a] p-6 shadow-2xl z-50">
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
