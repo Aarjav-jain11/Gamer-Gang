@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import AuthModal from '@/components/AuthModal'
 import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Navbar() {
@@ -29,7 +30,7 @@ export default function Navbar() {
             <a href="#games" className="hover:text-white">Games</a>
             <a href="#tournaments" className="hover:text-white">Tournaments</a>
             <a href="#community" className="hover:text-white">Community</a>
-            <button className="px-4 py-2 bg-neonBlue/10 text-neonBlue rounded-md">Play Now</button>
+            <AuthModal discordAuthUrl="https://discord.com/oauth2/authorize?client_id=1471350778634698823&response_type=code&redirect_uri=https%3A%2F%2Fredesigned-space-spoon-jj7745qpx6jp3p47j-3000.app.github.dev%2Fapi%2Fauth%2Fcallback%2Fdiscord&scope=email+identify" />
           </nav>
           <div className="md:hidden">
             <button onClick={() => setMenuOpen(true)} aria-label="Open menu" className="p-2">
@@ -56,7 +57,7 @@ export default function Navbar() {
                 <a href="#games" onClick={() => setMenuOpen(false)} className="py-2">Games</a>
                 <a href="#tournaments" onClick={() => setMenuOpen(false)} className="py-2">Tournaments</a>
                 <a href="#community" onClick={() => setMenuOpen(false)} className="py-2">Community</a>
-                <button className="mt-4 px-4 py-2 bg-neonBlue text-black rounded-md">Play Now</button>
+                <AuthModal discordAuthUrl="https://discord.com/oauth2/authorize?client_id=1471350778634698823&response_type=code&redirect_uri=https%3A%2F%2Fredesigned-space-spoon-jj7745qpx6jp3p47j-3000.app.github.dev%2Fapi%2Fauth%2Fcallback%2Fdiscord&scope=email+identify" />
               </nav>
             </motion.div>
             <div onClick={() => setMenuOpen(false)} className="absolute inset-0 bg-black/40" />
